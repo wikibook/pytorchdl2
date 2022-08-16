@@ -1,26 +1,26 @@
-## PyTorchモデルのONNX形式エクスポート
+## PyTorch 모델을 ONNX 형식으로 추출하는 방법
 
-### ONNXとは
-　ONNXはOpen Neural Network Exchangeの略称で、機械学習・ディープラーニングで広く使用されている標準フォーマットです。  
-　PytorchやKerasなどの機械学習フレームワークからエクスポートすることができ、ONNX RuntimeやTensorRT、ailia SDKなどの予測に特化したSDKを用いてエッジ環境など様々な環境でモデルを使った予測が可能になります。
+### ONNX란?
+　ONNX는 Open Neural Network Exchange의 약어로, 머신러닝・딥러닝에서 자주 사용되는 표준 포맷을 일컫는다.  
+　Pytorch나 Keras같은 머신러닝 프레임워크 등에서 추출할 수 있으며, ONNX Runtime이나 TensorRT、ailia SDK에 특화된 SDK를 사용해서 에지 환경을 포함한 다양한 환경에서 모델을 사용한 예측을 가틍케 한다.
 
-### PyTorchからのエクスポート方法
-　PyTorchで作ったモデルをONNX形式にエクスポートする手順はとても簡単です。例として本書11.8節で作ったモデルをエクスポートすることにします。  
-　11.8節で学習が終わった状態で以下のセルを追加し、実行して下さい。
+### PyTorch에서 추출하는 방법
+　PyTorch로 작성한 모델을 ONNX 형식으로 추출하는 순서는 매우 간단하다. 예를 들어, 이 책의 11.8절에서 사용한 모델을 통해 추출해보자.  
+　11.8절에서 학습이 끝난 상태로 아래의 코드를 셀에 추가해서 실행해보기 바란다.
 
 ```py3
-# ダミーデータの作成
+# 더미 데이터 작성
 dummy_input = torch.randn((1, 3, 32, 32)).to(device)
 
-# onyx形式でexport
-# keep_initializers_as_inputsのオプションが重要でこれがないとエラーになる
+# onyx형식으로 export
+# keep_initializers_as_inputs 옵션이 중요하며, 이것이 없으면 에러가 발생함
 torch.onnx.export(net, dummy_input, "cifar10-pytorch-sample.onnx", 
                   keep_initializers_as_inputs=True, verbose=True)
 
 ```
 
-　これで、Google Colabのローカルディレクトリに``cifar10-pytorch-sample.onnx``というONNX形式のファイルができました。  
-　あとは
+　이것으로, Google Colab의 로컬 디렉토리에``cifar10-pytorch-sample.onnx``이라는 ONNX 형식의 파일이 생겼을 것이다.  
+　그 다음은
 
 
 ```py3
@@ -28,14 +28,15 @@ from google.colab import files
 files.download('cifar10-pytorch-sample.onnx')
 ```
 
-などのコードで、ファイルをPCにダウンロードした後、必要に応じてこのファイルを他環境にデプロイする手順となります。ダウンロードにはかなり時間がかかりますので、その点だけご注意下さい。
+처럼, 파일을 PC로 다운로드 한 다음, 필요에 따라 이 파일을 다른 환경으로 디플로이하는 식이다.
+다운로드에 꽤 긴 시간이 걸리는 점에 주의하기 바란다.
 
-### ONNXファイルの利用例
-　エクスポート後のONNXファイルのデプロイ（配布）手順は、個々の実行環境ごとに異なりますので、そちらのガイドを参照して下さい。  
-　その一例として、IBM社のパブリッククラウドである Watson Studioでのデプロイ手順は、以下のqiitaに記事を記載していますので、参考とされて下さい。
+### ONNX 파일의 사용 예시
+　추출 후 ONNX 파일을 디플로이(배포)하는 순서는 실행 환경에 따라 다르므로, 아래의 가이드를 참조하기 바란다.  
+　일례로, IBM사의 퍼블릭 클라우드인 Watson Studio에서 디플로이 하는 순서는 qiita에 내용을 기재해 두었으니 참고하기 바란다.
 
 [PyTorchのDL ModelをWatson MLで動かす](https://qiita.com/makaishi2/items/641466cbe99ad9575df3)
 
 <hr>
 
-[メインページに戻る](../README.md)
+[메인 페이지로 돌아가기](../README.md)

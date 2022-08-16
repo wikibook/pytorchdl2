@@ -1,46 +1,51 @@
-## 실습 Notebook 이동 방법
+## 실습 Notebook을 사용하는 방법
 
 **전제**  
-Gmail 주소를 미리 가져와 다른 탭에서 Gmail에 로그인한 상태로 둡니다.
+Gmail 계정이 사전에 등록되어 있고, 별도의 탭에서 Gmail에 로그인한 상태를 전제로 합니다.
 
 
-1. 다음 링크를 클릭하여 노트북 목록을 표시합니다.  
-(<kbd>Ctrl</kbd> 키를 누른 상태에서 링크를 클릭하면 다른 탭에서 열 수 있습니다.)   
-[노트북 목록](../notebooks.md)
+1. 아래의 링크를 클릭해서 Notebook 목록을 표시합니다.  
+   (ctrl 키를 누른 상태로 클릭하면 별도의 탭으로 표시됩니다.)   
+[Notebook 목록](../notebooks.md)
+<!---
+[Notebook 목록](../notebooks.md){:target="_blank" rel="noopener"} 
+<p><a href="../notebooks.md" target="_blank">Notebook一覧</a></p>
+-->  
+
 
 <div align="left">
-<img src="../images/howto-01.png">
+<img src="../images/howto-01.png" width="500">
 </div>
 
-2. 실행할 Notebook 링크를 클릭합니다.  
-(이하는 맨 위의 미리보기 ‘이미지 인식 시작하기’의 링크를 클릭했을 때의 화면입니다)
+2. 실행하고 싶은 Notebook의 링크를 클릭합니다.  
+   (아래는 첫번째의「미리보기」링크를 클릭한 경우의 화면입니다.)
 
 <div align="left">
-<img src="../images/howto-02.png">
-</div>
-
-
-3. 파란색 테두리로 둘러싸인 ‘Drive로 복사’ 링크를 클릭합니다.
-
-<div align="left">
-<img src="../images/howto-03.png">
-</div>
-
-4. 위의 화면과 같이 되면, Notebook 실행 준비가 완료됩니다.
-
-<div align="left">
-<img src="../images/howto-04.png">
-</div>
-
-　화면 상단의 ‘라이브러리 & 커맨드 준비’의 아래를 마우스로 클릭합니다. 위 그림 왼쪽의 파란색 원으로 둘러싸인 화살표 아이콘이 표시됩니다.  
-　Notebook은 ‘셀’이라는 상자 단위로 프로그램을 실행합니다. 화살표 아이콘은 현재 선택된 셀을 의미합니다.  
-　이 상태에서 <kbd>Shift</kbd> + <kbd>Enter</kbd>를 입력하면 선택한 셀이 실행됩니다. 프로그램을 실행하는 데 약간의 시간이 걸리지만 결국 아래 그림과 같이 보일 것입니다.
-
-<div align="left">
-<img src="../images/howto-05.png">
+<img src="../images/howto-02.png" width="500">
 </div>
 
 
-　아래와 같이 <kbd>Shift</kbd> + <kbd>Enter</kbd>를 반복 실행합니다.
+3. 파란색 사각형으로 표시된「Drive로 복사」를 클릭합니다.
+
+<div align="left">
+<img src="../images/howto-03.png" width="500">
+</div>
+
+4. 위의 화면처럼 보인다면, notebook 실행 준비가 완료된 것입니다.
+
+<div align="left">
+<img src="../images/howto-04.png" width="500">
+</div>
+
+　화면 상단의「# 필요 라이브러리 설치」의 아랫부분을 마우스로 클릭하면, 위의 그림과 같이 좌측 상단의 파란색 원으로 표시된 화살표 모양의 아이콘이 표시됩니다.  
+　Notebook에는「셀」이라는 상자 단위로 프로그램을 실행할 수 있습니다. 화살표 아이콘은 현재 선택된「셀」을 의미합니다.  
+　이 상태로「Shift + Enter」(Shift를 누른 상태로 Enter를 누름)을 입력하면, 선택중인 셀이 실행됩니다. 프로그램의 실행에 다소 시간이 걸리지만, 최종적으로 아래 그림과 같은 상태로 됩니다.
+
+<div align="left">
+<img src="../images/howto-05.png" width="500">
+</div>
+
+
+　이하,「Shift + Enter」로 셀을 실행해주기 바랍니다.
 
 [메인 페이지로 돌아가기](../README.md)
